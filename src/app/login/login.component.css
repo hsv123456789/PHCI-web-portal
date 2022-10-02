@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    };
+    #block{
+        display: block;
+    }
+    .email-block{
+        padding-top: 250px;
+    }
+    .login-btn{
+        display: flex;
+        justify-content: space-between;
+    }
+    .buttons{
+        padding-top: 10px;
+    }
+    #login{
+        padding: 10px;
+        margin-right: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        color: white;
+        background-color: #1dbfc1;
+    }
+    #register{
+        padding: 10px;
+        margin-right: 10px;
+        color: #1dbfc1;
+    }
+    #password_field{
+        text-align: center;
+        width: 30%;
+        
+    }
+    #inputPassword6{
+     width: 200px;
+        
+     
+    }
+    #inputEmail{
+        width: 200px;
+        
+    }
+    .col-xs{
+        width: 20px;
+    }
+    

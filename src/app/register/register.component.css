@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    };
+    #block{
+        display: block;
+    }
+    .email-block{
+        padding-top: 250px;
+    }
+    .login-btn{
+        display: flex;
+        justify-content: space-between;
+    }
+    .buttons{
+        padding-top: 10px;
+    }
+    #login{
+        padding: 10px;
+        margin-right: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    #register{
+        padding: 10px;
+        margin-right: 10px;
+    }
+    #password_field{
+       
+        width: 200px;
+        
+    }
+    #inputPassword6{
+        width: 200px;
+        
+        
+    }
+    #inputEmail{
+        width: 200px;
+      
+    }
