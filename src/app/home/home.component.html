@@ -28,42 +28,19 @@
         
           <div class=" m-5">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
+                <div class="col" *ngFor="let induvidual of card_components">
                     <div class="card p-3">
-                        <img [src]="ImagePath" alt="">
+                        <img [src]="induvidual.ImagePath" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Makes progress easier</h5>
+                            <h5 class="card-title">{{induvidual.title}}</h5>
                         </div>
                         <div class="card-text">
-                            <p>It helps you to understand your application better and you can work with it very easily compared to other applications</p>
+                            <p>{{induvidual.text}}</p>
                         </div>
 
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card p-3">
-                        <img [src]="ImagePath1" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Can have better financial reports</h5>
-                        </div>
-                        <div class="card-text">
-                            <p>financial management is very easy if you know who is using your application and how are people using it </p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-3">
-                        <img [src]="ImagePath2" alt="Image of progress">
-                        <div class="card-body">
-                            <h5 class="card-title">Problem detection is easier</h5>
-                        </div>
-                        <div class="card-text">
-                            <p>It Helps you to understand the problem that is present in your particular application so debugging is very easy to the developer </p>
-                        </div>
-                        
-                    </div>
-                </div>
+                
             </div>
           </div>  
      </div>
