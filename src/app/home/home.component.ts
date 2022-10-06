@@ -9,9 +9,6 @@ export class HomeComponent implements OnInit {
    ImagePath:string ;
    ImagePath1:string;
    ImagePath2:string;
-   json = {
-    "title" : "langesh"
-   }
    card_components =[ {
       title:"Makes progress easier",
       text: "It helps you understand your application better and you can work with it very easily compared to other application ",
