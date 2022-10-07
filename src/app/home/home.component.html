@@ -1,50 +1,36 @@
+<!--Navbar for the application -->
+<app-navbar></app-navbar>
+<!--Analytics part-->
+<div class="card mt-5">
+  <div class="card-body p-5">
+    <h1 class="text-center">Welcome to the Analytics website administrator</h1>
+    <p class="text-center">
+      With this page you can view the activities of your application
+    </p>
+    <div class="justify-content-center d-flex">
+      <a href="" class="btn btn-info">To Your Website</a>
+    </div>
+  </div>
+</div>
+<!--Card to explain why analytics-->
+<div class="card mt-5">
+  <h2 class="text-center">Why analytics?</h2>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-    <!--Navbar for the application -->
-       <app-navbar></app-navbar>
-     <!--Analytics part-->
-     <div class="card mt-5">
-        <div class="card-body p-5">
-            <h1 class="text-center">Welcome to the Analytics website administrator</h1>
-            <p class="text-center">With this page you can view the activities of your application </p>
-            <div class="justify-content-center d-flex ">
-                <a href="" class="btn btn-info ">To Your Website</a>
-            </div>
-             
+  <div class="m-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let induvidual of card_components">
+        <div class="card p-3">
+          <img [src]="induvidual.ImagePath" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">{{ induvidual.title }}</h5>
+          </div>
+          <div class="card-text">
+            <p>{{ induvidual.text }}</p>
+          </div>
         </div>
-       
-     </div>
-     <!--Card to explain why analytics-->
-     <div class="card mt-5 ">
-        <h2 class="text-center">Why analytics?</h2>
-        
-          <div class=" m-5">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col" *ngFor="let induvidual of card_components">
-                    <div class="card p-3">
-                        <img [src]="induvidual.ImagePath" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">{{induvidual.title}}</h5>
-                        </div>
-                        <div class="card-text">
-                            <p>{{induvidual.text}}</p>
-                        </div>
-
-                    </div>
-                </div>
-                
-            </div>
-          </div>  
-     </div>
-     <!--Footer for the application-->
-       <app-footer></app-footer>
-     
-</body>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Footer for the application-->
+<app-footer></app-footer>

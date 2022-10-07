@@ -1,7 +1,39 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<body>
-    <app-navbar></app-navbar>
-<h1>web analytics</h1>
-</body>
-
-
+<app-navbar></app-navbar>
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">Welcome to the Web analytics web Page</h1>
+    <p class="text-center">
+      This is the place where You could view your webpage analytics for your
+      application
+    </p>
+  </div>
+</div>
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">Platform analytics</h1>
+    <p class="text-center">
+      View which platform is mostly used in the current application
+    </p>
+    <div>
+      <canvasjs-chart
+        [options]="chartOptions"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
+    </div>
+  </div>
+</div>
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">Location analytics</h1>
+    <p class="text-center">
+      View from which location did the user access your website
+    </p>
+    <div>
+      <canvasjs-chart
+        [options]="userLocation"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,7 +1,81 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<body>
-    <app-navbar></app-navbar>
-<h1>app analytics</h1>
-</body>
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<app-navbar></app-navbar>
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">Welcome to the App analytics web Page</h1>
+    <p class="text-center">
+      This is the place where You could view your Application analytics for your
+      application
+    </p>
+  </div>
+</div>
 
-
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">Platform analytics</h1>
+    <p class="text-center">
+      View which platform is mostly used in the current application
+    </p>
+    <div>
+      <canvasjs-chart
+        [options]="chartOptions"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
+    </div>
+  </div>
+</div>
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">User analytics</h1>
+    <p class="text-center">
+      View How many active users used the application over the past period
+    </p>
+    <div>
+      <div>
+        <canvasjs-chart
+          [options]="userStatistics"
+          [styles]="{ width: '100%', height: '360px' }"
+          (chartInstance)="getChartInstance($event)"
+        ></canvasjs-chart>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">Age analytics</h1>
+    <p class="text-center">
+      Your customer here are divided on the basis of their age
+    </p>
+    <div>
+      <div>
+        <canvasjs-chart
+          [options]="barGraph"
+          [styles]="{ width: '100%', height: '360px' }"
+        ></canvasjs-chart>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mt-5 ms-5 me-5">
+  <div class="card-body">
+    <h1 class="text-center">Service analytics</h1>
+    <p class="text-center">
+      The customer has choosen this particular treatment from you
+    </p>
+    <div>
+      <div>
+        <canvasjs-chart
+          [options]="serviceSelected"
+          [styles]="{ width: '100%', height: '360px' }"
+        ></canvasjs-chart>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

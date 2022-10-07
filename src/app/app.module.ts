@@ -10,7 +10,9 @@ import { AppAnalyticsComponent } from './app-analytics/app-analytics.component';
 import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { FormsModule } from '@angular/forms';
+import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component'
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +22,15 @@ import { FooterComponent } from './footer/footer.component';
     AppAnalyticsComponent,
     WebAnalyticsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CanvasJSChart,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
