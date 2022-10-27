@@ -26,16 +26,21 @@
         margin-right: 10px;
     }
     #password_field{
-       
+
         width: 200px;
-        
+
     }
     #inputPassword6{
         width: 200px;
-        
-        
+
+
     }
+    #inputPassword7{
+      width: 200px;
+
+
+  }
     #inputEmail{
         width: 200px;
-      
+
     }

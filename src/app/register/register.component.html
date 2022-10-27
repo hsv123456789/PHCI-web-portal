@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="email-block">
-    <h1 class=" text-center mb-3">Register</h1>
-     <form class="text-center" id="">
-        <div >
-            <label for="email" class="form-label">Enter Email</label>
-        <br>
-        <div class="d-flex justify-content-center">
-            <input type="email" name="email" class="form-control justify-content-center" id="inputEmail">
+      <h1 class="text-center mb-3">Register</h1>
+      <form class="text-center" id="">
+        <div>
+          <label for="email" class="form-label">Enter Name</label>
+          <br />
+          <div class="d-flex justify-content-center">
+            <input
+              type="text"
+              [(ngModel)]="registerUserData.name"
+              name="name"
+              class="form-control justify-content-center"
+              id="inputEmail"
+            />
+          </div>
         </div>
-           
-        </div>
-        
-            <br>
-            <label for="password">Enter Password</label>
-            <br>
-            <div  class=" d-flex justify-content-center" >
-                <input type="password"   id="inputPassword6" class="form-control justify-content-center "  >
-            </div>
-            <br>
-            <label for="password"> Re-Enter Password</label>
-            <br>
-            <div class="d-flex justify-content-center" >
-                <input type="password"   id="inputPassword6" class="form-control justify-content-center "  >
-            </div>
-            
-            <div class="buttons">
-                <a  class="btn btn-info" id="login" routerLink="/login">Login</a>
-              
-                <a  class="btn btn-outline-info" id="register">Register</a>
-            </div>
-      
-     </form>
-    </div>
-    
-</body>
 
+        <br />
+        <label for="password">Enter Password</label>
+        <br />
+        <div class="d-flex justify-content-center">
+          <input
+            type="password"
+            [(ngModel)]="registerUserData.password"
+            name="password"
+            id="inputPassword6"
+            class="form-control justify-content-center"
+          />
+        </div>
+        <br />
+        <label for="password"> Re-Enter Password</label>
+        <br />
+        <div class="d-flex justify-content-center">
+          <input
+            type="password"
+            id="inputPassword7"
+            name="password1"
+            class="form-control justify-content-center"
+          />
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-info" id="login" name="login" routerLink="/login"
+            >Login</a
+          >
+
+          <a class="btn btn-outline-info" id="register" (click)="registerUser()"
+            >Register</a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

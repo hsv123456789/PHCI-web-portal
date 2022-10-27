@@ -3,15 +3,15 @@
   <h1 class="text-center mb-3">Login</h1>
   <form class="text-center justify-content-center" id="">
     <div>
-      <label for="email" class="form-label">Enter Email</label>
+      <label for="email" class="form-label">Enter Name</label>
       <br />
       <div class="d-flex justify-content-center">
         <input
-          type="email"
-          name="email"
+          type="name"
+          name="name"
           class="form-control col-lg-offset-4"
           id="inputEmail"
-          [(ngModel)]="email"
+          [(ngModel)]="loginUserData.name"
         />
       </div>
     </div>
@@ -23,19 +23,21 @@
       <input
         type="password"
         id="inputPassword6"
+        name="password"
         class="form-control"
-        [(ngModel)]="password"
+        [(ngModel)]="loginUserData.password"
       />
     </div>
 
     <div class="buttons">
-      <a
+      <button
         href="./mainpage.html"
         class="btn btn-info"
         id="login"
-        routerLink="/home"
-        >Login</a
+        (click)="loginUser()"
       >
+        Login
+      </button>
 
       <a
         href="./register.html"

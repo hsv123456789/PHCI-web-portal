@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../shared/auth.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +8,10 @@ import { AuthService } from '../shared/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  email: string = '';
-  password: string = '';
+  loginUserData = {
+    name: '',
+    password: '',
+  };
   constructor(
     public route: ActivatedRoute,
     public router: Router,
@@ -17,4 +19,14 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {}
+  loginUser() {
+    this.authenticationService.loginUser(this.loginUserData).subscribe(
+      (response) => {
+        console.log(response);
+        localStorage.setItem('token', response.token);
+        this.router.navigate(['/home']);
+      },
+      (error) => console.log(error)
+    );
+  }
 }
